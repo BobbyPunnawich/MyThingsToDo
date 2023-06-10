@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+body {
+  margin: 0;
+  background-image: linear-gradient(
+    to right,
+    rgb(242, 112, 156),
+    rgb(255, 148, 114)
+  );
+}
+
+.App {
+  background-color: #f0f0;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+  max-width: 800px;
+  margin: 60px auto;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.App.light {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.App.light h1,
+.App.dark h1 {
+  color: #ff4081;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.App.light button,
+.App.dark button {
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.App.light button:hover,
+.App.dark button:hover {
+  background-color: #f50057;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.App.light .todo,
+.App.dark .todo {
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.App.light .todo.urgent,
+.App.dark .todo.urgent {
+  border-right: 5px solid orange;
+}
+
+.App.light .todo.completed,
+.App.dark .todo.completed {
+  border-right: 5px solid #a3fc6f;
+}
+
+.App.light input[type="text"],
+.App.light input[type="date"],
+.App.light select,
+.App.dark input[type="text"],
+.App.dark input[type="date"],
+.App.dark select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eaeaea;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.App.light input[type="text"]:focus,
+.App.light input[type="date"]:focus,
+.App.light select:focus,
+.App.dark input[type="text"]:focus,
+.App.dark input[type="date"]:focus,
+.App.dark select:focus {
+  outline: none;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode */
+.App.dark {
+  background-color: #333;
+  color: #f0f0f0;
+}
+
+.App.dark button {
+  background-color: #ff4081;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.App.dark .todo {
+  background-color: #444;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  max-width: 250px;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.App.dark .todo.Urgent {
+  border-right: 5px solid #ff4081;
+}
+
+.App.dark .todo.Completed {
+  border-right: 5px solid #4caf50;
+}
+
+.App.dark input[type="text"],
+.App.dark input[type="date"],
+.App.dark select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #555;
+  color: #f0f0f0;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+}
+
+.App.dark input[type="text"]:focus,
+.App.dark input[type="date"]:focus,
+.App.dark select:focus {
+  outline: none;
+  background-color: #777;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Light mode */
+.App.light .todo-title,
+.App.dark .todo-title {
+  color: #ff4081;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark mode */
+.App.dark .todo-title {
+  color: #ff4081;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo {
+  background-color: #f7f7f7;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo.Completed {
+  border-right: 5px solid #4caf50;
+}
+
+.todo-description {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.todo-date {
+  font-size: 14px;
+  color: #999;
+}
+
+.todo-actions {
+  display: flex;
+  align-items: center;
+}
+
+.todo-actions button {
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.todo-actions button:hover {
+  color: #ff4081;
+}
+
+.todo-actions button:focus {
+  outline: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ff4081;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ff4081;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+.switch.dark {
+  background-color: #444;
+}
+
+.slider.dark {
+  background-color: #555;
+}
+
+input:checked + .slider.dark {
+  background-color: #ff4081;
+}
+
+input:focus + .slider.dark {
+  box-shadow: 0 0 1px #ff4081;
+}
+
+.todo-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Updated */
+  margin: -10px;
+}
+
+.todo {
+  flex: 0 0 calc(25% - 40px);
+}
+
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  border: 1px solid #ff4081;
+  border-radius: 3px;
+  background-color: white;
+}
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid #ff4081;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 6px;
+}
+
+.todo,
+.add-todo {
+  /* your existing styles... */
+  margin-bottom: 30px; /* adjust as needed */
+}
+
+.todo {
+  /* Your existing styles... */
+  word-wrap: break-word;
+}
+
+.todo {
+  /* Your existing styles... */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-text {
+    margin-bottom: 10px;
+  }
+
+  .todo-actions {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .App.light .todo,
+  .App.dark .todo {
+    max-width: calc(25% - 20px);
+  }
+}
+
+.button-group {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.button-group button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.AddTask {
+  display: flex;
+}
