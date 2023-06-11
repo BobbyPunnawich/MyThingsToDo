@@ -25,7 +25,6 @@ function App() {
       }
     } catch (error) {
       console.log(error);
-      // Handle error accordingly
     }
   };
 
@@ -48,7 +47,6 @@ function App() {
       }
     } catch (error) {
       console.log(error);
-      // Handle error accordingly
     }
   };
 
@@ -68,7 +66,6 @@ function App() {
       }
     } catch (error) {
       console.log(error);
-      // Handle error accordingly
     }
   };
 
@@ -79,7 +76,6 @@ function App() {
       setTodos(updatedTodos);
     } catch (error) {
       console.log(error);
-      // Handle error accordingly
     }
   };
 

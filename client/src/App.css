@@ -109,7 +109,6 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Dark mode */
 .App.dark {
   background-color: #333;
   color: #f0f0f0;
@@ -172,7 +171,6 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-/* Light mode */
 .App.light .todo-title,
 .App.dark .todo-title {
   color: #ff4081;
@@ -183,7 +181,6 @@ body {
   text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Dark mode */
 .App.dark .todo-title {
   color: #ff4081;
   font-size: 18px;
@@ -308,7 +305,7 @@ input:focus + .slider.dark {
 .todo-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Updated */
+  justify-content: center;
   margin: -10px;
 }
 
@@ -349,17 +346,17 @@ input[type="checkbox"]:checked:after {
 
 .todo,
 .add-todo {
-  /* your existing styles... */
-  margin-bottom: 30px; /* adjust as needed */
+
+  margin-bottom: 30px;
 }
 
 .todo {
-  /* Your existing styles... */
+
   word-wrap: break-word;
 }
 
 .todo {
-  /* Your existing styles... */
+
   word-wrap: break-word;
   overflow-wrap: break-word;
   hyphens: auto;
